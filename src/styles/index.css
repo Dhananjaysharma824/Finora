@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-forest: #153D32;
+  --color-forest-deep: #102F27;
+  --color-emerald: #2F765B;
+  --color-soft-green: #E5EFE8;
+  --color-canvas: #F7F8F5;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #EEF1EC;
+  --color-border: #E5E9E3;
+  --color-ink: #18231E;
+  --color-ink-secondary: #66736A;
+  --color-ink-muted: #929B94;
+  --color-gold: #D8A85D;
+  --color-coral: #D97757;
+  --color-danger: #D9534F;
+  --color-success: #2F765B;
+}
+
+:root {
+  --bg-canvas: #F7F8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #EEF1EC;
+  --bg-sidebar: #153D32;
+  --bg-sidebar-deep: #102F27;
+  --border-subtle: #E5E9E3;
+  --text-primary: #18231E;
+  --text-secondary: #66736A;
+  --text-muted: #929B94;
+  --accent-emerald: #2F765B;
+  --accent-soft-green: #E5EFE8;
+  --accent-gold: #D8A85D;
+  --accent-coral: #D97757;
+  --accent-danger: #D9534F;
+}
+
+.dark {
+  --bg-canvas: #0E1512;
+  --bg-surface: #151E1A;
+  --bg-surface-secondary: #1C2722;
+  --bg-sidebar: #0D261F;
+  --bg-sidebar-deep: #091C17;
+  --border-subtle: #24332C;
+  --text-primary: #EDF2EE;
+  --text-secondary: #9EADA4;
+  --text-muted: #6C7A72;
+  --accent-emerald: #3D9473;
+  --accent-soft-green: #1A3329;
+  --accent-gold: #D8A85D;
+  --accent-coral: #E08669;
+  --accent-danger: #E06662;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(146, 155, 148, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 115, 106, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #18231E !important;
+  }
+}

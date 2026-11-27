@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /login
+Allow: /register
+Disallow: /dashboard
+Disallow: /transactions
+Disallow: /analytics
+Disallow: /budgets
+Disallow: /goals
+Disallow: /recurring
+Disallow: /accounts
+Disallow: /reports
+Disallow: /calendar
+Disallow: /notifications
+Disallow: /settings
